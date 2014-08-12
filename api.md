@@ -385,7 +385,7 @@ A single User object with all its details
 + Response 200 (application/json)
     + Body
 
-           {
+            {
                 "id": 1890,
                 "message": "Quick get your free trial.",
                 "type": "reply",

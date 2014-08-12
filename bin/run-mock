@@ -1,2 +1,2 @@
 #!/bin/bash
-api-mock /vagrant/twitter-api-blueprint/resources/api.md http://api.stampede.dev/v1
+api-mock /vagrant/twitter-api-blueprint/api.md http://127.0.0.1:3000
