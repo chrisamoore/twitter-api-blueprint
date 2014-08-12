@@ -1,0 +1,8 @@
+FORMAT: 1A
+HOST: http://api.twitter.%env_string%
+
+# twitter-API
+twitter [API Blueprint](http://apiblueprint.org).
+
+API Mock available @ [mock.twitter.%env_string%](http://mock.twitter.%env_string%)
+

@@ -1,0 +1,2 @@
+#!/bin/bash
+aglio -i /vagrant/twitter-api-blueprint/api.md --host=127.0.0.1 --port=4000 -s -t slate

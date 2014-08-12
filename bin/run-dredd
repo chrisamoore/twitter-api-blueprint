@@ -1,0 +1,2 @@
+#!/bin/bash
+dredd ./twitter-api-blueprint/api.md http://api.twitter.dev/v1

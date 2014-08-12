@@ -1,0 +1,2 @@
+#!/bin/bash
+api-mock /vagrant/twitter-api-blueprint/resources/api.md http://api.stampede.dev/v1

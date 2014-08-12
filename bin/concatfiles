@@ -1,0 +1,14 @@
+#!/bin/bash
+FILE=${1}
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ENV=$(/var/www/twitter-laravel/artisan env:tld)
+
+cp $DIR/../resources/template.txt $DIR/../api.md
+
+if [[ -z "$FILE" ]]; then
+    tail -q -n +8 $DIR/../resources/users.md        >> $DIR/../api.md
+else
+    tail -q -n +8 $DIR/../resources/$FILE.md >> $DIR/../api.md
+fi
+
+sed -i -e "s/%env_string%/$ENV/g" $DIR/../api.md
