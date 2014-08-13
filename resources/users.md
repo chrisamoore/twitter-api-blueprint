@@ -17,9 +17,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                 "data": [
                     {
                         "id": 1,
+                        "name": "Nick Knol",
                         "email": "nickknol@gmail.com",
                         "handle": "nickknol",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -33,9 +34,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 2,
+                        "name": "Chris Moore",
                         "email": "chrisamoore@gmail.com",
                         "handle": "cmoore",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -49,9 +51,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 3,
+                        "name": "Justin Woodcock",
                         "email": "justinwoodcock@gmail.com",
                         "handle": "thewoodcock",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -70,9 +73,6 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     "messages"
                 ]
             }
-
-
-
 
 
 ### Create a User [POST]
@@ -198,4 +198,51 @@ A single User object with all its details
             {
               "data": "4",
               "message": "User deleted successfully."
+            }
+
+
+## User Tweets [/users/{id}/tweets]
+### Tweets Collection [GET]
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": [
+                    {
+                        "id": 187,
+                        "user_id": 24,
+                        "message": "free cialis",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 188,
+                        "user_id": 24,
+                        "message": "free cialis",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 189,
+                        "user_id": 24,
+                        "message": "free cialis",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    }
+                ],
+                "embeds": [
+                    "user"
+                ]
             }
