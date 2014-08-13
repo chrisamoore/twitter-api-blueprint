@@ -5,4 +5,4 @@ FILE=$1
 $DIR/concatfiles $1;
 /var/www/twitter-laravel/artisan env:reset;
 
-dredd /vagrant/stampede-api-blueprint/api.md http://api.stampede.dev/v1 --user nickknol@gmail..com:password -s
+dredd /vagrant/stampede-api-blueprint/api.md http://api.stampede.dev/v1 --user nickknol@gmail.com:password -s
