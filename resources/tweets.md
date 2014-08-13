@@ -17,58 +17,40 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                 "data": [
                     {
                         "id": 187,
+                        "user_id": 24
                         "message": "free cialis",
-                        "type": "retweet",
-                        "tweet_id": 1
+                        "original_tweet_id": 101
                         "created_at": "2014-05-23 21:06:05",
-                        "updated_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
                             "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
                     },
                     {
-                        "id": 18,
+                        "id": 188,
+                        "user_id": 24
                         "message": "free cialis",
-                        "type": "reply",
-                        "tweet_id": 1
+                        "original_tweet_id": 101
                         "created_at": "2014-05-23 21:06:05",
-                        "updated_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/18"
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
                     },
                     {
-                        "id": 1001,
+                        "id": 189,
+                        "user_id": 24
                         "message": "free cialis",
-                        "type": "tweet",
-                        "tweet_id": 1
+                        "original_tweet_id": 101
                         "created_at": "2014-05-23 21:06:05",
-                        "updated_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/1001"
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
-                    },
-                    {
-                        "id": 324,
-                        "message": "free cialis",
-                        "type": "favorite",
-                        "tweet_id": 1
-                        "created_at": "2014-05-23 21:06:05",
-                        "updated_at": "2014-05-23 21:06:05",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/324"
-                        }
-                    },
+                    }
                 ],
                 "embeds": [
-                    "user",
-                    "favorites",
-                    "retweets",
-                    "replies"
+                    "user"
                 ]
             }
 
@@ -83,8 +65,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
 
             {
                 "message" : "Quick get your free trial.",
-                "image_url" : "http://google.com/image/1",
-                "type" : "reply"
+                "original_tweet_id": null 
             }
 
 + Response 200 (application/json)
@@ -92,11 +73,10 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
 
            {
                 "id": 1890,
+                "user_id": 24
                 "message": "Quick get your free trial.",
-                "type": "reply",
-                "tweet_id": 1
-                "created_at": "2014-05-23 21:06:05",
-                "updated_at": "2014-05-23 21:06:05",
+                "original_tweet_id": 1
+                "created_at": "2014-05-23 21:06:05"
                 "_links": {
                     "rel": "self",
                     "uri": "http://api.twitter.dev/v1/tweets/1890"
@@ -117,23 +97,21 @@ A single Tweet object with all its details
     + Body
 
             {
-                "data": [{
-                            "id": 1890,
-                            "message": "Quick get your free trial.",
-                            "type": "reply",
-                            "tweet_id": 1
-                            "created_at": "2014-05-23 21:06:05",
-                            "updated_at": "2014-05-23 21:06:05",
-                            "_links": {
-                                "rel": "self",
-                                "uri": "http://api.twitter.dev/v1/tweets/1890"
-                            }
-                }],
+                "data": [
+                    {
+                        "id": 1890,
+                        "user_id": 24
+                        "message": "Quick get your free trial.",
+                        "original_tweet_id": 1
+                        "created_at": "2014-05-23 21:06:05"
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/1890"
+                        }
+                    }
+                ],
                 "embeds": [
-                    "tweets",
-                    "favorites",
-                    "retweets",
-                    "replies"
+                    "user"
                 ]
             }
 
@@ -146,6 +124,6 @@ A single Tweet object with all its details
     + Body
 
             {
-              "data": "4",
+              "data": "1890",
               "message": "Tweet deleted successfully."
             }
