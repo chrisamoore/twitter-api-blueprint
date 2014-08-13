@@ -17,7 +17,12 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                 "data": [
                     {
                         "id": 1,
-                        "email": "admin@twitter.com",
+                        "email": "nickknol@gmail.com",
+                        "handle": "nickknol",
+                        "profile_photo": "http://lorempixel.com/400/200",
+                        "background_photo": "http://lorempixel.com/400/200",
+                        "bio": "Blah blah blah, this is a block of text",
+                        "website": "http://www.xkcd.com",
                         "active": true,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
@@ -28,7 +33,12 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 2,
-                        "email": "supervisor@twitter.com",
+                        "email": "chrisamoore@gmail.com",
+                        "handle": "cmoore",
+                        "profile_photo": "http://lorempixel.com/400/200",
+                        "background_photo": "http://lorempixel.com/400/200",
+                        "bio": "Blah blah blah, this is a block of text",
+                        "website": "http://www.xkcd.com",
                         "active": true,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
@@ -39,7 +49,12 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 3,
-                        "email": "manager@twitter.com",
+                        "email": "justinwoodcock@gmail.com",
+                        "handle": "thewoodcock",
+                        "profile_photo": "http://lorempixel.com/400/200",
+                        "background_photo": "http://lorempixel.com/400/200",
+                        "bio": "Blah blah blah, this is a block of text",
+                        "website": "http://www.xkcd.com",
                         "active": true,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
@@ -52,8 +67,7 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                 "embeds": [
                     "tweets",
                     "favorites",
-                    "retweets",
-                    "replies"
+                    "messages"
                 ]
             }
 
@@ -67,9 +81,12 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
     + Body
 
             {
-                "handle" : "@camdesigns",
-                "email": "cmoore@twitter.com",
-                "password": "1l1k3pupp135"
+                "email": "newuser@gmail.com",
+                "handle": "newuser",
+                "profile_photo": "http://lorempixel.com/400/200",
+                "background_photo": "http://lorempixel.com/400/200",
+                "bio": "Blah blah blah, this is a block of text",
+                "website": "http://www.xkcd.com",
             }
 
 + Response 200 (application/json)
@@ -77,15 +94,19 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
 
             {
                 "data": {
-                    "id": 11,
-                    "email": "cmoore@twitter.com",
-                    "handle" : "@camdesigns",
-                    "active": false,
+                    "id": 4,
+                    "email": "newuser@gmail.com",
+                    "handle": "newuser",
+                    "profile_photo": "http://lorempixel.com/400/200",
+                    "background_photo": "http://lorempixel.com/400/200",
+                    "bio": "Blah blah blah, this is a block of text",
+                    "website": "http://www.xkcd.com",
+                    "active": true,
                     "created_at": "2014-05-23 21:06:05",
                     "updated_at": "2014-05-23 21:06:05",
                     "_links": {
                         "rel": "self",
-                        "uri": "http://api.twitter.dev/v1/users/1"
+                        "uri": "http://api.twitter.dev/v1/users/4"
                     }
                 }
             }
@@ -110,26 +131,64 @@ A single User object with all its details
                 "data": [
                     {
                         "id": 4,
-                        "email": "admin@twitter.com",
+                        "email": "newuser@gmail.com",
+                        "handle": "newuser",
+                        "profile_photo": "http://lorempixel.com/400/200",
+                        "background_photo": "http://lorempixel.com/400/200",
+                        "bio": "Blah blah blah, this is a block of text",
+                        "website": "http://www.xkcd.com",
                         "active": true,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/users/1"
+                            "uri": "http://api.twitter.dev/v1/users/4"
                         }
                     }
                 ],
                 "embeds": [
                     "tweets",
-                    "favorites",
-                    "retweets",
-                    "replies"
+                    "favorites"
+                    "messages"
                 ]
             }
 
 
 
+### Update a User [PUT]
++ Request (application/json)
+    + Body
+
+            {
+                "website": "http://www.penny-arcade.com"
+            }
+
++ Response 200
+    + Body
+
+            {
+                "data": {
+                        "id": 4,
+                        "email": "newuser@gmail.com",
+                        "handle": "newuser",
+                        "profile_photo": "http://lorempixel.com/400/200",
+                        "background_photo": "http://lorempixel.com/400/200",
+                        "bio": "Blah blah blah, this is a block of text",
+                        "website": "http://www.penny-arcade.com",
+                        "active": true,
+                        "created_at": "2014-05-23 21:06:05",
+                        "updated_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/users/4"
+                        }
+                },
+                "embeds": [
+                    "tweets",
+                    "favorites",
+                    "messages"
+                ]
+            }
 
 
 ### Remove a User [DELETE]
