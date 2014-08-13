@@ -19,7 +19,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                         "id": 187,
                         "message": "free cialis",
                         "type": "retweet",
-                        "tweet_id": 1
+                        "tweet_id": 1,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
                         "_links": {
@@ -31,7 +31,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                         "id": 18,
                         "message": "free cialis",
                         "type": "reply",
-                        "tweet_id": 1
+                        "tweet_id": 1,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
                         "_links": {
@@ -43,7 +43,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                         "id": 1001,
                         "message": "free cialis",
                         "type": "tweet",
-                        "tweet_id": 1
+                        "tweet_id": 1,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
                         "_links": {
@@ -55,7 +55,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                         "id": 324,
                         "message": "free cialis",
                         "type": "favorite",
-                        "tweet_id": 1
+                        "tweet_id": 1,
                         "created_at": "2014-05-23 21:06:05",
                         "updated_at": "2014-05-23 21:06:05",
                         "_links": {
@@ -94,7 +94,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                 "id": 1890,
                 "message": "Quick get your free trial.",
                 "type": "reply",
-                "tweet_id": 1
+                "tweet_id": 1,
                 "created_at": "2014-05-23 21:06:05",
                 "updated_at": "2014-05-23 21:06:05",
                 "_links": {
@@ -121,7 +121,7 @@ A single Tweet object with all its details
                             "id": 1890,
                             "message": "Quick get your free trial.",
                             "type": "reply",
-                            "tweet_id": 1
+                            "tweet_id": 1,
                             "created_at": "2014-05-23 21:06:05",
                             "updated_at": "2014-05-23 21:06:05",
                             "_links": {
