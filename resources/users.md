@@ -76,18 +76,11 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
     + Body
 
             {
-                "data": {
-                    "id": 7,
-                    "email": "newuser@gmail.com",
-                    "active": true,
-                    "activation_token": "",
-                    "created_at": "2014-08-14 00:53:54",
-                    "updated_at": "2014-08-14 00:53:54",
-                    "_links": {
-                        "rel": "self",
-                        "uri": "/users/7"
-                    }
-                }
+                "handle": "blah",
+                "email": "newuser@gmail.com",
+                "active": true,
+                "activation_token": "",
+                "password": "newpassword"
             }
 
 + Response 200 (application/json)
@@ -161,44 +154,6 @@ A single User object with all its details
             }
 
 
-## Users [/users/{id}/tweets]
-Gets all tweets for one user
-+ Parameters
-    + id (required, number, `1`) ... User ID
-    
-### Retrieve a Users tweets [GET]
-+ Response 200 (application/json)
-    + Body
-
-            {
-                data: [
-                    {
-                        id: 1
-                        user_id: 1
-                        original_tweet_id: 0
-                        message: "Facere a laudantium voluptas minima itaque."
-                        created_at: "2014-08-14 00:56:02"
-                        _links: {
-                            rel: "self"
-                            uri: "\/tweets\/1"
-                        }
-                    },
-                    {
-                        id: 2
-                        user_id: 1
-                        original_tweet_id: 0
-                        message: "Nisi saepe dolorem eaque alias explicabo fugiat."
-                        created_at: "2014-08-14 00:56:02"
-                        _links: {
-                            rel: "self"
-                            uri: "\/tweets\/2"
-                        }
-                    }
-                ]
-            }
-
-
-
 ## Users [/users/{id}/messagesfrom]
 Gets all messages from a user
 + Parameters
@@ -241,6 +196,53 @@ Gets all messages from a user
                         "_links": {
                             "rel": "self",
                             "uri": "/messages/3"
+                        }
+                    }
+                ]
+            }
+
+
+## User Tweets [/users/{id}/tweets]
++ Parameters
+    + id (required, number, `1`) ... User ID
+    
+### Tweets Collection [GET]
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": [
+                    {
+                        "id": 187,
+                        "user_id": 24,
+                        "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 188,
+                        "user_id": 24,
+                        "message": "This weeks SDPHP MeetUp: @camdesigns \"API's: You're doing it wrong\" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 189,
+                        "user_id": 24,
+                        "message": "Love APIs and our product? We're looking for a dev evangelist. Full time SF. jobs@apiary.io",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
                     }
                 ]
@@ -295,55 +297,11 @@ Gets all messages to a user
             }
             
             
-## Users [/users/{id}/favorites]
-Gets all favorites for a user
+## Users [/users/{id}]
+Update a user
 + Parameters
     + id (required, number, `1`) ... User ID
     
-### Retrieve a Users favorite tweets [GET]
-+ Response 200 (application/json)
-    + Body    
-
-            {
-                "data": [
-                    {
-                        "id": 0,
-                        "user_id": 1,
-                        "original_tweet_id": 0,
-                        "message": "Nisi saepe dolorem eaque alias explicabo fugiat.",
-                        "created_at": "",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "/tweets/"
-                        }
-                    },
-                    {
-                        "id": 0,
-                        "user_id": 1,
-                        "original_tweet_id": 0,
-                        "message": "Porro temporibus aliquam suscipit inventore architecto ut deserunt.",
-                        "created_at": "",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "/tweets/"
-                        }
-                    },
-                    {
-                        "id": 0,
-                        "user_id": 1,
-                        "original_tweet_id": 0,
-                        "message": "Ratione officiis provident eius aut in quos.",
-                        "created_at": "",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "/tweets/"
-                        }
-                    }
-                ]
-            }
-
-
-
 
 ### Update a User [PUT]
 + Request (application/json)
@@ -386,48 +344,4 @@ Gets all favorites for a user
             }
 
 
-## User Tweets [/users/{id}/tweets]
-+ Parameters
-    + id (required, number, `1`) ... User ID
-    
-### Tweets Collection [GET]
-+ Response 200 (application/json)
-    + Body
 
-            {
-                "data": [
-                    {
-                        "id": 187,
-                        "user_id": 24,
-                        "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
-                        "original_tweet_id": 101,
-                        "created_at": "2014-05-23 21:06:05",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/187"
-                        }
-                    },
-                    {
-                        "id": 188,
-                        "user_id": 24,
-                        "message": "This weeks SDPHP MeetUp: @camdesigns \"API's: You're doing it wrong\" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
-                        "original_tweet_id": 101,
-                        "created_at": "2014-05-23 21:06:05",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/187"
-                        }
-                    },
-                    {
-                        "id": 189,
-                        "user_id": 24,
-                        "message": "Love APIs and our product? We're looking for a dev evangelist. Full time SF. jobs@apiary.io",
-                        "original_tweet_id": 101,
-                        "created_at": "2014-05-23 21:06:05",
-                        "_links": {
-                            "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/187"
-                        }
-                    }
-                ]
-            }

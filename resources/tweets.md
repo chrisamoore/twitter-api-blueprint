@@ -62,21 +62,24 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
 
             {
                 "message" : "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
-                "original_tweet_id": null 
+                "original_tweet_id": null,
+                "user_id": 1
             }
 
 + Response 200 (application/json)
     + Body
 
            {
-                "id": 1890,
-                "user_id": 24,
-                "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
-                "original_tweet_id": 1,
-                "created_at": "2014-05-23 21:06:05"
-                "_links": {
-                    "rel": "self",
-                    "uri": "http://api.twitter.dev/v1/tweets/1890"
+                "data": {
+                    "id": 18,
+                    "user_id": 24,
+                    "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                    "original_tweet_id": 1,
+                    "created_at": "2014-05-23 21:06:05",
+                    "_links": {
+                        "rel": "self",
+                        "uri": "http://api.twitter.dev/v1/tweets/18"
+                    }
                 }
             }
 
@@ -87,7 +90,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
 A single Tweet object with all its details
 
 + Parameters
-    + id (required, number, `1890`) ... Tweet ID
+    + id (required, number, `18`) ... Tweet ID
 
 ### Retrieve a Tweet [GET]
 + Response 200 (application/json)
@@ -96,14 +99,14 @@ A single Tweet object with all its details
             {
                 "data": [
                     {
-                        "id": 1890,
+                        "id": 18,
                         "user_id": 24,
                         "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
                         "original_tweet_id": 1,
-                        "created_at": "2014-05-23 21:06:05"
+                        "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
-                            "uri": "http://api.twitter.dev/v1/tweets/1890"
+                            "uri": "http://api.twitter.dev/v1/tweets/18"
                         }
                     }
                 ]
@@ -118,6 +121,6 @@ A single Tweet object with all its details
     + Body
 
             {
-              "data": "1890",
+              "data": "18",
               "message": "Tweet deleted successfully."
             }

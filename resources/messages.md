@@ -8,8 +8,8 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/messages)
 
 # Group Messages
 
-## Users [/messages]
-### Users Collection [GET]
+## Messages [/messages]
+### Messages Collection [GET]
 + Response 200 (application/json)
     + Body
 
@@ -87,7 +87,7 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/messages)
 
 
 
-## User [/users/{id}]
+## Message [/messages/{id}]
 A single Message object with all its details
 
 + Parameters
