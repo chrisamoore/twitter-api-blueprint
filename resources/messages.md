@@ -30,7 +30,7 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/messages)
                         "id": 2,
                         "from_user_id": 2,
                         "to_user_id": 3,
-                        "message": "Blah blah blah, this is a new message",
+                        "message": "Herpa Derp.",
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
@@ -41,17 +41,13 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/messages)
                         "id": 3,
                         "from_user_id": 1,
                         "to_user_id": 3,
-                        "message": "Blah blah blah, this is a new message",
+                        "message": "Hi, thanks for the follow.",
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
                             "uri": "http://api.twitter.dev/v1/messages/3"
                         }
                     }
-                ],
-                "embeds": [
-                    "from_user",
-                    "to_user"
                 ]
             }
 
@@ -116,10 +112,6 @@ A single Message object with all its details
                             "uri": "http://api.twitter.dev/v1/messages/4"
                         }
                     }
-                ],
-                "embeds": [
-                    "from_user",
-                    "to_user"
                 ]
             }
 

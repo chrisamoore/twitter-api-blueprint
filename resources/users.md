@@ -17,9 +17,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                 "data": [
                     {
                         "id": 1,
+                        "name": "Nick Knol",
                         "email": "nickknol@gmail.com",
                         "handle": "nickknol",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -33,9 +34,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 2,
+                        "name": "Chris Moore",
                         "email": "chrisamoore@gmail.com",
                         "handle": "cmoore",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -49,9 +51,10 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                     },
                     {
                         "id": 3,
+                        "name": "Justin Woodcock",
                         "email": "justinwoodcock@gmail.com",
                         "handle": "thewoodcock",
-                        "profile_photo": "http://lorempixel.com/400/200",
+                        "profile_photo": "http://lorempixel.com/200/200",
                         "background_photo": "http://lorempixel.com/400/200",
                         "bio": "Blah blah blah, this is a block of text",
                         "website": "http://www.xkcd.com",
@@ -63,16 +66,8 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/users)
                             "uri": "http://api.twitter.dev/v1/users/3"
                         }
                     }
-                ],
-                "embeds": [
-                    "tweets",
-                    "favorites",
-                    "messages"
                 ]
             }
-
-
-
 
 
 ### Create a User [POST]
@@ -151,11 +146,6 @@ A single User object with all its details
                             "uri": "http://api.twitter.dev/v1/users/4"
                         }
                     }
-                ],
-                "embeds": [
-                    "tweets",
-                    "favorites"
-                    "messages"
                 ]
             }
             
@@ -382,12 +372,62 @@ Gets all favorites for a user
                             "rel": "self",
                             "uri": "http://api.twitter.dev/v1/users/4"
                         }
-                },
-                "embeds": [
-                    "tweets",
-                    "favorites",
-                    "messages"
-                ]
+                }
             }
 
 
+### Remove a User [DELETE]
++ Response 200
+    + Body
+
+            {
+              "data": "4",
+              "message": "User deleted successfully."
+            }
+
+
+## User Tweets [/users/{id}/tweets]
++ Parameters
+    + id (required, number, `1`) ... User ID
+    
+### Tweets Collection [GET]
++ Response 200 (application/json)
+    + Body
+
+            {
+                "data": [
+                    {
+                        "id": 187,
+                        "user_id": 24,
+                        "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 188,
+                        "user_id": 24,
+                        "message": "This weeks SDPHP MeetUp: @camdesigns \"API's: You're doing it wrong\" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    },
+                    {
+                        "id": 189,
+                        "user_id": 24,
+                        "message": "Love APIs and our product? We're looking for a dev evangelist. Full time SF. jobs@apiary.io",
+                        "original_tweet_id": 101,
+                        "created_at": "2014-05-23 21:06:05",
+                        "_links": {
+                            "rel": "self",
+                            "uri": "http://api.twitter.dev/v1/tweets/187"
+                        }
+                    }
+                ]
+            }

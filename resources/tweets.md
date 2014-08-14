@@ -17,9 +17,9 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                 "data": [
                     {
                         "id": 187,
-                        "user_id": 24
-                        "message": "free cialis",
-                        "original_tweet_id": 101
+                        "user_id": 24,
+                        "message": "This weeks SDPHP MeetUp: @camdesigns \"API's: You're doing it wrong\" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
+                        "original_tweet_id": 101,
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
@@ -28,9 +28,9 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                     },
                     {
                         "id": 188,
-                        "user_id": 24
-                        "message": "free cialis",
-                        "original_tweet_id": 101
+                        "user_id": 24,
+                        "message": "Love APIs and our product? We're looking for a dev evangelist. Full time SF. jobs@apiary.io",
+                        "original_tweet_id": 101,
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
@@ -39,18 +39,15 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                     },
                     {
                         "id": 189,
-                        "user_id": 24
-                        "message": "free cialis",
-                        "original_tweet_id": 101
+                        "user_id": 24,
+                        "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                        "original_tweet_id": 101,
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
                             "rel": "self",
                             "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
                     }
-                ],
-                "embeds": [
-                    "user"
                 ]
             }
 
@@ -64,7 +61,7 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
     + Body
 
             {
-                "message" : "Quick get your free trial.",
+                "message" : "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
                 "original_tweet_id": null 
             }
 
@@ -73,9 +70,9 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
 
            {
                 "id": 1890,
-                "user_id": 24
-                "message": "Quick get your free trial.",
-                "original_tweet_id": 1
+                "user_id": 24,
+                "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                "original_tweet_id": 1,
                 "created_at": "2014-05-23 21:06:05"
                 "_links": {
                     "rel": "self",
@@ -100,18 +97,15 @@ A single Tweet object with all its details
                 "data": [
                     {
                         "id": 1890,
-                        "user_id": 24
-                        "message": "Quick get your free trial.",
-                        "original_tweet_id": 1
+                        "user_id": 24,
+                        "message": "Using Dredd, our testing tool? We'd love to talk to you! Send us what your experience is.",
+                        "original_tweet_id": 1,
                         "created_at": "2014-05-23 21:06:05"
                         "_links": {
                             "rel": "self",
                             "uri": "http://api.twitter.dev/v1/tweets/1890"
                         }
                     }
-                ],
-                "embeds": [
-                    "user"
                 ]
             }
 
