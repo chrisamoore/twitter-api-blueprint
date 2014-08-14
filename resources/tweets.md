@@ -48,9 +48,6 @@ API Mock available @ [mock.twitter.dev/tweets](http://mock.twitter.dev/tweets)
                             "uri": "http://api.twitter.dev/v1/tweets/187"
                         }
                     }
-                ],
-                "embeds": [
-                    "user"
                 ]
             }
 
@@ -109,9 +106,6 @@ A single Tweet object with all its details
                             "uri": "http://api.twitter.dev/v1/tweets/1890"
                         }
                     }
-                ],
-                "embeds": [
-                    "user"
                 ]
             }
 

@@ -48,10 +48,6 @@ API Mock available @ [mock.twitter.dev/users](http://mock.twitter.dev/messages)
                             "uri": "http://api.twitter.dev/v1/messages/3"
                         }
                     }
-                ],
-                "embeds": [
-                    "from_user",
-                    "to_user"
                 ]
             }
 
@@ -116,10 +112,6 @@ A single Message object with all its details
                             "uri": "http://api.twitter.dev/v1/messages/4"
                         }
                     }
-                ],
-                "embeds": [
-                    "from_user",
-                    "to_user"
                 ]
             }
 

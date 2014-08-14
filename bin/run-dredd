@@ -3,6 +3,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 FILE=$1
 
 $DIR/concatfiles $1;
-/var/www/twitter-laravel/artisan env:reset;
+/var/www/twitter-laravel/artisan mysql:clear
 
-dredd /vagrant/stampede-api-blueprint/api.md http://api.stampede.dev/v1 --user nickknol@gmail..com:password -s
+dredd /var/www//twitter-api-blueprint/api.md http://api.twitter.dev/v1 --user nickknol@gmail.com:password -s
