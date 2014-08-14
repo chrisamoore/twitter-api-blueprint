@@ -222,7 +222,7 @@ A single User object with all its details
                     {
                         "id": 188,
                         "user_id": 24,
-                        "message": "This weeks SDPHP MeetUp: @camdesigns "API's: You're doing it wrong" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
+                        "message": "This weeks SDPHP MeetUp: @camdesigns \"API's: You're doing it wrong\" hosted at Variable Action Office RSVP today http://ow.ly/A5Gtf ",
                         "original_tweet_id": 101,
                         "created_at": "2014-05-23 21:06:05",
                         "_links": {
